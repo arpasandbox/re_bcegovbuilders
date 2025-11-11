@@ -143,11 +143,11 @@ const Hero = () => {
       {/* Navigation Arrows - Hidden on mobile, visible on md and up */}
       <button
         onClick={previousSlide}
-        className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full transition-all duration-300 group"
+        className="hidden md:flex absolute left-2 xs:left-2 sm:left-3 md:left-4 lg:left-6 xl:left-8 top-1/2 -translate-y-1/2 z-20 p-2 xs:p-2 sm:p-2 md:p-3 lg:p-3 xl:p-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full transition-all duration-300 group"
         aria-label="Previous slide"
       >
         <svg
-          className="w-6 h-6 text-white group-hover:scale-110 transition-transform"
+          className="w-4 xs:w-4 sm:w-5 md:w-6 lg:w-6 xl:w-7 h-4 xs:h-4 sm:h-5 md:h-6 lg:h-6 xl:h-7 text-white group-hover:scale-110 transition-transform"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -161,11 +161,11 @@ const Hero = () => {
 
       <button
         onClick={nextSlide}
-        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full transition-all duration-300 group"
+        className="hidden md:flex absolute right-2 xs:right-2 sm:right-3 md:right-4 lg:right-6 xl:right-8 top-1/2 -translate-y-1/2 z-20 p-2 xs:p-2 sm:p-2 md:p-3 lg:p-3 xl:p-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full transition-all duration-300 group"
         aria-label="Next slide"
       >
         <svg
-          className="w-6 h-6 text-white group-hover:scale-110 transition-transform"
+          className="w-4 xs:w-4 sm:w-5 md:w-6 lg:w-6 xl:w-7 h-4 xs:h-4 sm:h-5 md:h-6 lg:h-6 xl:h-7 text-white group-hover:scale-110 transition-transform"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -195,13 +195,13 @@ const Hero = () => {
       </div> */}
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16 relative z-10">
         <div className="text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-2xl"
+            className="text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl1:text-7xl xl2:text-8xl font-bold text-white mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-6 xl:mb-8 drop-shadow-2xl"
           >
             PROFESSIONAL WORKFORCE DEVELOPMENT
           </motion.h1>
@@ -210,7 +210,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-lg"
+            className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xl1:text-2xl xl2:text-3xl text-gray-100 mb-6 xs:mb-6 sm:mb-7 md:mb-8 lg:mb-8 xl:mb-10 max-w-3xl mx-auto drop-shadow-lg px-2 xs:px-2 sm:px-4"
           >
             Providing Professional Workforce Management to Ensure Your Projects
             Run Smoothly, on Time, and Within Budget

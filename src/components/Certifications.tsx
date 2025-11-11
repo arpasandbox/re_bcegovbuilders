@@ -33,8 +33,32 @@ const Certifications = () => {
     },
   ]
 
-  // Calculate max index (show 3 items at a time, so for 5 items, max index is 2)
-  const itemsPerView = 3
+  // Responsive items per view based on screen size
+  const [itemsPerView, setItemsPerView] = useState(3)
+  
+  useEffect(() => {
+    const updateItemsPerView = () => {
+      const width = window.innerWidth
+      let newItemsPerView = 3
+      if (width <= 480) {
+        newItemsPerView = 1 // xs and sm: 1 item
+      } else if (width <= 768) {
+        newItemsPerView = 2 // md: 2 items
+      } else {
+        newItemsPerView = 3 // lg and above: 3 items
+      }
+      
+      setItemsPerView(newItemsPerView)
+      // Reset index if it becomes invalid with new itemsPerView
+      const newMaxIndex = Math.max(0, certifications.length - newItemsPerView)
+      setCurrentIndex((prev) => Math.min(prev, newMaxIndex))
+    }
+    
+    updateItemsPerView()
+    window.addEventListener('resize', updateItemsPerView)
+    return () => window.removeEventListener('resize', updateItemsPerView)
+  }, [certifications.length])
+  
   const maxIndex = Math.max(0, certifications.length - itemsPerView)
 
   // Auto-scroll carousel
@@ -78,19 +102,19 @@ const Certifications = () => {
     <section
       id="certifications"
       ref={ref}
-      className="py-20 bg-white"
+      className="py-10 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 xl1:py-28 xl2:py-32 bg-white"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-6">
             Certifications & Accreditations
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
             Committed to the highest standards of quality, safety, and environmental responsibility
           </p>
           
@@ -98,71 +122,30 @@ const Certifications = () => {
 
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
-          {/* Navigation Arrows */}
-          {/* <button
-            onClick={previousSlide}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/80 hover:bg-white shadow-lg rounded-full transition-all duration-300 group hidden md:flex items-center justify-center"
-            aria-label="Previous certification"
-          >
-            <svg
-              className="w-6 h-6 text-gray-700 group-hover:text-secondary transition-colors"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M15 19l-7-7 7-7" />
-            </svg>
-          </button> */}
-
-          {/* <button
-            onClick={nextSlide}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/80 hover:bg-white shadow-lg rounded-full transition-all duration-300 group hidden md:flex items-center justify-center"
-            aria-label="Next certification"
-          >
-            <svg
-              className="w-6 h-6 text-gray-700 group-hover:text-secondary transition-colors"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M9 5l7 7-7 7" />
-            </svg>
-          </button> */}
-
           {/* Carousel */}
-          <div className="overflow-hidden px-12 md:px-16">
+          <div className="overflow-hidden px-2 xs:px-2 sm:px-4 md:px-8 lg:px-12 xl:px-16 xl1:px-20 xl2:px-24">
             <div className="relative">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ 
-                  transform: `translateX(-${currentIndex * (100 / 3)}%)`
+                  transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`
                 }}
               >
                 {certifications.map((cert, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 px-4 w-1/3 "
-                    // style={{ width: '33.333333%' }}
+                    className={`flex-shrink-0 px-2 xs:px-2 sm:px-3 md:px-4 lg:px-4 xl:px-5 ${
+                      itemsPerView === 1 ? 'w-full' : 
+                      itemsPerView === 2 ? 'w-1/2' : 
+                      'w-1/3'
+                    }`}
                   >
-                    <div className="bg-accent p-4 md:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-secondary flex flex-col items-center justify-center h-32 md:h-40">
+                    <div className="bg-accent p-3 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 xl1:p-10 xl2:p-12 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-secondary flex flex-col items-center justify-center h-24 xs:h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 xl1:h-44 xl2:h-48">
                       <img
                         src={cert.image}
                         alt={cert.name}
-                        className="w-16 h-16 md:w-20 md:h-20 object-contain mb-2 md:mb-3"
+                        className="w-12 h-12 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-20 xl:h-20 xl1:w-24 xl1:h-24 xl2:w-28 xl2:h-28 object-contain"
                       />
-                      {/* <p className="text-xs md:text-sm font-semibold text-gray-700 text-center">
-                        {cert.name}
-                      </p> */}
                     </div>
                   </div>
                 ))}

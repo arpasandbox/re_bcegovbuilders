@@ -62,19 +62,19 @@ const PastPerformance = () => {
     <section
       id="projects"
       ref={ref}
-      className="py-20 bg-gray-100"
+      className="py-10 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 xl1:py-28 xl2:py-32 bg-gray-100"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-6">
             Past Performance
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
             A track record of excellence and successful project delivery
           </p>
         </motion.div>
@@ -84,7 +84,7 @@ const PastPerformance = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -94,16 +94,16 @@ const PastPerformance = () => {
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">
+              <div className="text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl xl1:text-5xl xl2:text-6xl font-bold text-secondary mb-1 xs:mb-1 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-3">
                 {stat.number}
               </div>
-              <div className="text-gray-600">{stat.label}</div>
+              <div className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg text-gray-600">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -111,7 +111,7 @@ const PastPerformance = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="relative h-64 rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden group"
+              className="relative h-48 xs:h-48 sm:h-52 md:h-56 lg:h-60 xl:h-64 xl1:h-72 xl2:h-80 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden group"
             >
               {/* Background Image */}
               <div
@@ -125,21 +125,21 @@ const PastPerformance = () => {
               </div>
 
               {/* Content */}
-              <div className="relative h-full flex flex-col justify-between p-6 text-white">
+              <div className="relative h-full flex flex-col justify-between p-3 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-6 text-white">
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-semibold text-secondary bg-white/90 px-2 py-1 rounded">
+                  <div className="flex items-center justify-between mb-2 xs:mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-3">
+                    <span className="text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm font-semibold text-secondary bg-white/90 px-1 xs:px-1 sm:px-1 md:px-2 lg:px-2 xl:px-2 py-0.5 xs:py-0.5 sm:py-0.5 md:py-1 lg:py-1 xl:py-1 rounded">
                       {project.type}
                     </span>
-                    <span className="text-sm text-white/90 bg-black/30 px-2 py-1 rounded">
+                    <span className="text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm text-white/90 bg-black/30 px-1 xs:px-1 sm:px-1 md:px-2 lg:px-2 xl:px-2 py-0.5 xs:py-0.5 sm:py-0.5 md:py-1 lg:py-1 xl:py-1 rounded">
                       {project.year}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl xl1:text-2xl xl2:text-2xl font-bold text-white mb-1 xs:mb-1 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-2">
                     {project.name}
                   </h3>
                 </div>
-                <p className="text-white/90 text-sm">{project.description}</p>
+                <p className="text-white/90 text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm xl1:text-base xl2:text-base">{project.description}</p>
               </div>
             </motion.div>
           ))}

@@ -59,19 +59,19 @@ const Services = () => {
     <section
       id="services"
       ref={ref}
-      className="py-20 bg-white"
+      className="py-10 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 xl1:py-28 xl2:py-32 bg-white"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-6">
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
             Comprehensive construction solutions tailored to your needs
           </p>
         </motion.div>
@@ -80,20 +80,20 @@ const Services = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+              className="bg-gray-50 p-4 xs:p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="mb-4 flex justify-center">
+              <div className="mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5 flex justify-center">
                 <img
                   src={service.icon}
                   alt={`${service.title} icon`}
-                  className="w-20 h-20 object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  className="w-12 xs:w-12 sm:w-14 md:w-16 lg:w-20 xl:w-20 xl1:w-24 xl2:w-28 h-12 xs:h-12 sm:h-14 md:h-16 lg:h-20 xl:h-20 xl1:h-24 xl2:h-28 object-contain opacity-90 hover:opacity-100 transition-opacity"
                   onError={(e) => {
                     // Fallback to a construction icon if the image fails to load
                     const target = e.target as HTMLImageElement
@@ -103,10 +103,10 @@ const Services = () => {
                   }}
                 />
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-3">
+              <h3 className="text-base xs:text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl xl1:text-2xl xl2:text-3xl font-bold text-secondary mb-2 xs:mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-600">{service.description}</p>
+              <p className="text-xs xs:text-xs sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>

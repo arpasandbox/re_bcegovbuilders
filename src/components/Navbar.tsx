@@ -29,33 +29,30 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-lg py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white shadow-lg py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-3 xl1:py-4 xl2:py-4'
+          : 'bg-transparent py-3 xs:py-3 sm:py-4 md:py-4 lg:py-5 xl:py-5 xl1:py-6 xl2:py-6'
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
-            <span className={`font-bold text-xl ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              BCE Construction Inc
-            </span>
+          <motion.div 
+            whileHover={{ scale: 1.05 }} 
+            className="flex items-center space-x-2"
+          >
+            <img 
+              src="/images/bce_logo3.svg" 
+              alt="BCE Construction Inc Logo" 
+              className={`transition-all duration-300 ${
+                isScrolled 
+                  ? 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
+                  : 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
+              } w-auto`}
+            />
           </motion.div>
 
-          {/* <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2">
-              
-            <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">BCE</span>
-            </div>
-            <span className={`font-bold text-xl ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              Gov Builders
-            </span>
-          </motion.div> */}
-
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-3 xs:space-x-3 sm:space-x-3 md:space-x-4 lg:space-x-6 xl:space-x-8 xl1:space-x-10 xl2:space-x-12">
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
@@ -64,7 +61,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
-                className={`font-medium transition-colors ${
+                className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
                   isScrolled ? 'text-gray-700 hover:text-secondary' : 'text-white hover:text-secondary'
                 }`}
               >
@@ -76,13 +73,13 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg ${
-              isScrolled ? 'text-gray-900' : 'text-white'
+            className={`md:hidden p-2 rounded-lg transition-colors ${
+              isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'
             }`}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -109,13 +106,13 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white shadow-lg"
           >
-            <div className="container mx-auto px-4 py-4 space-y-4">
+            <div className="container mx-auto px-2 xs:px-2 sm:px-4 py-3 xs:py-3 sm:py-4 space-y-2 xs:space-y-2 sm:space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-gray-700 hover:text-secondary font-medium transition-colors"
+                  className="block text-gray-700 hover:text-secondary font-medium transition-colors text-sm xs:text-sm sm:text-base md:text-base py-1 xs:py-1 sm:py-2 md:py-2"
                 >
                   {link.name}
                 </a>

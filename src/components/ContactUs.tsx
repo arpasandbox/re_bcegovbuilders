@@ -37,33 +37,33 @@ const ContactUs = () => {
     <section
       id="contact"
       ref={ref}
-      className="py-20 bg-white"
+      className="py-10 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 xl1:py-28 xl2:py-32 bg-white"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-6">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
             When you choose BCE, you can look forward to a highly specialized team dedicated to you!
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 xs:space-y-4 sm:space-y-5 md:space-y-5 lg:space-y-6 xl:space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-secondary mb-2">
+                <label htmlFor="name" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
                   Name
                 </label>
                 <input
@@ -73,13 +73,13 @@ const ContactUs = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
+                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
                   placeholder="Your Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-secondary mb-2">
+                <label htmlFor="email" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
                   Email
                 </label>
                 <input
@@ -89,13 +89,13 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
+                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-secondary mb-2">
+                <label htmlFor="phone" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
                   Phone
                 </label>
                 <input
@@ -104,13 +104,13 @@ const ContactUs = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
+                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
                   placeholder="(555) 123-4567"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-secondary mb-2">
+                <label htmlFor="message" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
                   Message
                 </label>
                 <textarea
@@ -120,7 +120,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none resize-none"
+                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -129,7 +129,7 @@ const ContactUs = () => {
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full px-8 py-4 bg-secondary text-white font-semibold rounded-lg shadow-lg hover:bg-accent transition-colors"
+                className="w-full px-4 xs:px-4 sm:px-5 md:px-6 lg:px-8 xl:px-10 py-3 xs:py-3 sm:py-3 md:py-3 lg:py-4 xl:py-5 bg-secondary text-white text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg font-semibold rounded-lg shadow-lg hover:bg-accent transition-colors"
               >
                 Send Message
               </motion.button>
@@ -141,33 +141,33 @@ const ContactUs = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-6 xs:space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-8 xl:space-y-10"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl xl1:text-3xl xl2:text-3xl font-bold text-gray-900 mb-4 xs:mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
                 Contact Information
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-4 xs:space-y-4 sm:space-y-4 md:space-y-5 lg:space-y-6 xl:space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 30 }}
                     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                     transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                    className="flex items-start space-x-4"
+                    className="flex items-start space-x-3 xs:space-x-3 sm:space-x-3 md:space-x-4 lg:space-x-4 xl:space-x-5"
                   >
                     <div className="flex-shrink-0">
                       <img
                         src={info.icon}
                         alt={`${info.label} icon`}
-                        className="w-6 h-6 object-contain"
+                        className="w-5 xs:w-5 sm:w-5 md:w-6 lg:w-6 xl:w-7 h-5 xs:h-5 sm:h-5 md:h-6 lg:h-6 xl:h-7 object-contain"
                       />
                     </div>
                     <div>
-                      <div className="font-semibold text-secondary mb-1">
+                      <div className="font-semibold text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg text-secondary mb-1 xs:mb-1 sm:mb-1 md:mb-1 lg:mb-1 xl:mb-2">
                         {info.label}
                       </div>
-                      <div className="text-gray-600">{info.value}</div>
+                      <div className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg text-gray-600">{info.value}</div>
                     </div>
                   </motion.div>
                 ))}
@@ -178,12 +178,10 @@ const ContactUs = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-secondary p-5 rounded-xl text-white"
-              // className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl text-white"
-              
+              className="bg-secondary p-4 xs:p-4 sm:p-5 md:p-5 lg:p-6 xl:p-8 rounded-lg xs:rounded-lg sm:rounded-xl text-white"
             >
-              <h4 className="text-2xl font-bold mb-4">Business Hours</h4>
-              <div className="space-y-2 text-gray-100 text-md xs:font-light">
+              <h4 className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl xl1:text-3xl xl2:text-3xl font-bold mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">Business Hours</h4>
+              <div className="space-y-2 xs:space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-2 xl:space-y-3 text-gray-100 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
                   <span>9:00 AM - 7:00 PM</span>
