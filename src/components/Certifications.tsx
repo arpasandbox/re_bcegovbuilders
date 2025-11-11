@@ -6,7 +6,8 @@ const Certifications = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
+  // const [isPaused, setIsPaused] = useState(false)
+  const [isPaused] = useState(false)
   const intervalRef = useRef<number | null>(null)
 
   // Certification logos from /images directory
@@ -80,23 +81,23 @@ const Certifications = () => {
     }
   }, [isPaused, isInView, maxIndex])
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index)
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 5000) // Resume after 5 seconds
-  }
+  // const goToSlide = (index: number) => {
+  //   setCurrentIndex(index)
+  //   setIsPaused(true)
+  //   setTimeout(() => setIsPaused(false), 5000) // Resume after 5 seconds
+  // }
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 5000)
-  }
+  // const nextSlide = () => {
+  //   setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
+  //   setIsPaused(true)
+  //   setTimeout(() => setIsPaused(false), 5000)
+  // }
 
-  const previousSlide = () => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1))
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 5000)
-  }
+  // const previousSlide = () => {
+  //   setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1))
+  //   setIsPaused(true)
+  //   setTimeout(() => setIsPaused(false), 5000)
+  // }
 
   return (
     <section
@@ -140,7 +141,7 @@ const Certifications = () => {
                       'w-1/3'
                     }`}
                   >
-                    <div className="bg-accent p-3 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 xl1:p-10 xl2:p-12 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-secondary flex flex-col items-center justify-center h-24 xs:h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 xl1:h-44 xl2:h-48">
+                    <div className="bg-gray-50 p-3 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 xl1:p-10 xl2:p-12 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 flex flex-col items-center justify-center h-24 xs:h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 xl1:h-44 xl2:h-48">
                       <img
                         src={cert.image}
                         alt={cert.name}

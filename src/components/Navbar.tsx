@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+ const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    console.log(screenWidth);
+    console.log(screenHeight);
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -36,23 +42,24 @@ const Navbar = () => {
       <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            className="flex items-center space-x-2"
-          >
-            <img 
-              src="/images/bce_logo3.svg" 
-              alt="BCE Construction Inc Logo" 
-              className={`transition-all duration-300 ${
-                isScrolled 
+          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2 xs:w-[200px] xs:h-[40px] sm:w-[200px] sm:h-[40px] lg:w-[200px] lg:h-[56px]">
+
+            <img src="/images/bce_logo3.svg" alt="BCE Construction Inc Logo" 
+              className={`transition-all duration-300 ${isScrolled 
                   ? 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
+                  : 'hidden' 
+              } w-auto`}/>
+
+            <img src="/images/bce_logo3_w.svg" alt="BCE Construction Inc Logo" 
+              className={`transition-all duration-300 ${isScrolled 
+                  ? 'hidden' 
                   : 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
-              } w-auto`}
-            />
+              } w-auto`}/>
+
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-3 xs:space-x-3 sm:space-x-3 md:space-x-4 lg:space-x-6 xl:space-x-8 xl1:space-x-10 xl2:space-x-12">
+          <div className="xs:hidden sm:hidden md:hidden flex items-center space-x-3 xs:space-x-3 sm:space-x-3 md:space-x-4 lg:space-x-6 xl:space-x-8 xl1:space-x-10 xl2:space-x-12">
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
@@ -62,7 +69,7 @@ const Navbar = () => {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
                 className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
-                  isScrolled ? 'text-gray-700 hover:text-secondary' : 'text-white hover:text-secondary'
+                  isScrolled ? 'text-secondary hover:text-accent' : 'text-white hover:text-accent'
                 }`}
               >
                 {link.name}
@@ -73,7 +80,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
+            className={`xs:block sm:block md:block hidden p-2 rounded-lg transition-colors ${
               isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'
             }`}
             aria-label="Toggle menu"
@@ -104,7 +111,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white shadow-lg"
+            className="lg:hidden bg-white shadow-lg"
           >
             <div className="container mx-auto px-2 xs:px-2 sm:px-4 py-3 xs:py-3 sm:py-4 space-y-2 xs:space-y-2 sm:space-y-3">
               {navLinks.map((link) => (

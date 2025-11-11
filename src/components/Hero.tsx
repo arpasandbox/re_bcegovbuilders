@@ -54,12 +54,12 @@ const Hero = () => {
   }, [slides.length, isPaused])
 
   // Go to specific slide
-  const goToSlide = (index: number) => {
-    setDirection(index > currentSlide ? 1 : -1)
-    setCurrentSlide(index)
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 8000) // Resume after 8 seconds
-  }
+  // const goToSlide = (index: number) => {
+  //   setDirection(index > currentSlide ? 1 : -1)
+  //   setCurrentSlide(index)
+  //   setIsPaused(true)
+  //   setTimeout(() => setIsPaused(false), 8000) // Resume after 8 seconds
+  // }
 
   // Previous slide
   const previousSlide = () => {

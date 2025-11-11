@@ -42,7 +42,7 @@ const AboutUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
         >
-          <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-6">
+          <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-secondary mb-2 xs:mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-6">
             About Us
           </h2>
           <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
@@ -50,17 +50,17 @@ const AboutUs = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 items-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
+        <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 items-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xl1:text-3xl xl2:text-4xl font-bold text-gray-900 mb-4 xs:mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
+            <h3 className="text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xl1:text-3xl xl2:text-4xl font-bold text-secondary mb-4 xs:mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
               BCE Construction Inc
             </h3>
             <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-gray-600 mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">
-              a service-disabled veteran-owned small business,
+              A service-disabled veteran-owned small business,
               delivers accomplished sitework, infrastructure, vertical construction, and
               specialty facility services. Our certified professionals uphold rigorous
               standards of safety, quality, and compliance serving government and
@@ -120,10 +120,10 @@ const AboutUs = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <h3 className="text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xl1:text-3xl xl2:text-4xl font-bold text-gray-900 mb-6 xs:mb-6 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-10 text-center">
+          <h3 className="text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xl1:text-3xl xl2:text-4xl font-bold text-secondary mb-6 xs:mb-6 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-10 text-center">
             Our Core Values
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8">
+          <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={index}
