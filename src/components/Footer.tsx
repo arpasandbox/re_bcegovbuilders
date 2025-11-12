@@ -43,7 +43,7 @@ const Footer = () => {
               <span className="font-bold text-base xs:text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl text-white">Gov Builders</span> */}
               <img src="/images/bce_logo_w.png" alt="bce_logo" />
             </div>
-            <p className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg text-gray-400 mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">
+            <p className="xs:text-xs sm:text-sm md:text-sm text-base text-gray-400 mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">
               Providing Professional Workforce Management to Ensure Your Projects Run Smoothly, on Time, and Within Budget
             </p>
             {/* <div className="flex space-x-3 xs:space-x-3 sm:space-x-3 md:space-x-4 lg:space-x-4 xl:space-x-5">
@@ -90,7 +90,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-white font-bold text-base xs:text-base sm:text-lg md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">Resources</h3>
+            <h3 className="text-white font-bold xs:text-base sm:text-base md:text-base text-lg mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">Resources</h3>
             <ul className="space-y-2 xs:space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-2 xl:space-y-3">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
@@ -112,7 +112,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h3 className="text-white font-bold text-base xs:text-base sm:text-lg md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">Contact</h3>
+            <h3 className="text-white font-bold xs:text-base sm:text-base md:text-base text-lg mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">Contact</h3>
             <ul className="space-y-2 xs:space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-2 xl:space-y-3 text-gray-400">
               <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/mail_icon.png" alt="mailto" className="w-3 xs:w-3 sm:w-3 md:w-4 lg:w-4 xl:w-5 h-3 xs:h-3 sm:h-3 md:h-4 lg:h-4 xl:h-5 object-contain" /> bcegovbuilders.com</div></li>
               <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/call_icon.png" alt="callto" className="w-3 xs:w-3 sm:w-3 md:w-4 lg:w-4 xl:w-5 h-3 xs:h-3 sm:h-3 md:h-4 lg:h-4 xl:h-5 object-contain" /> +1 (480) 770-6555</div></li>

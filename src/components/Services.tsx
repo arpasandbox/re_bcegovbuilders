@@ -32,6 +32,11 @@ const Services = () => {
       description: 'Overseeing every phase of the project, from engineering and permitting to onsite management, quality assurance, and full procurement services.',
       icon: '/images/project_management_logo.png',
     },
+    {
+      title: 'Vertical Construction',
+      description: 'Comprehensive construction services from foundations and structural framing to full MEP systems, HVAC, and high-quality interior and exterior finishes.',
+      icon: '/images/vertical_construction_logo.png',
+    },
   ]
 
   const containerVariants = {

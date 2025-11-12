@@ -51,12 +51,12 @@ const PastPerformance = () => {
     },
   ]
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '25+', label: 'Years Experience' },
-    { number: '98%', label: 'Client Satisfaction' },
-    { number: '50+', label: 'Awards Won' },
-  ]
+  // const stats = [
+  //   { number: '500+', label: 'Projects Completed' },
+  //   { number: '25+', label: 'Years Experience' },
+  //   { number: '98%', label: 'Client Satisfaction' },
+  //   { number: '50+', label: 'Awards Won' },
+  // ]
 
   return (
     <section
@@ -80,7 +80,7 @@ const PastPerformance = () => {
         </motion.div>
 
         {/* Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -100,7 +100,7 @@ const PastPerformance = () => {
               <div className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg text-gray-600">{stat.label}</div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Projects Grid */}
         <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 grid-cols-3 gap-10 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10">
