@@ -29,7 +29,7 @@ const ContactUs = () => {
 
   const contactInfo = [
     { icon: '/images/mail_icon.png', label: 'Email', value: 'bcegovbuilders.com' },
-    { icon: '/images/call_icon.png', label: 'Phone', value: '+1 (480) 770-6555' },
+    { icon: '/images/call_icon.png', label: 'Phone', value: '(480) 770-6555' },
     { icon: '/images/address_icon.png', label: 'Address', value: '18444 N. 25th Avenue Suite 420, Phoenix, AZ 85023, USA' },
   ]
 

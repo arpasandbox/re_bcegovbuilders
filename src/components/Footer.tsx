@@ -114,9 +114,9 @@ const Footer = () => {
           >
             <h3 className="text-white font-bold xs:text-base sm:text-base md:text-base text-lg mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">Contact</h3>
             <ul className="space-y-2 xs:space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-2 xl:space-y-3 text-gray-400">
-              <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/mail_icon.png" alt="mailto" className="w-3 xs:w-3 sm:w-3 md:w-4 lg:w-4 xl:w-5 h-3 xs:h-3 sm:h-3 md:h-4 lg:h-4 xl:h-5 object-contain" /> bcegovbuilders.com</div></li>
-              <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/call_icon.png" alt="callto" className="w-3 xs:w-3 sm:w-3 md:w-4 lg:w-4 xl:w-5 h-3 xs:h-3 sm:h-3 md:h-4 lg:h-4 xl:h-5 object-contain" /> +1 (480) 770-6555</div></li>
-              <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/address_icon.png" alt="addressto" className="w-3 xs:w-3 sm:w-3 md:w-4 lg:w-4 xl:w-5 h-3 xs:h-3 sm:h-3 md:h-4 lg:h-4 xl:h-5 object-contain" />18444 N. 25th Avenue Suite 420, Phoenix, AZ 85023, USA</div></li>
+              <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/mail_icon.png" alt="mailto" className="w-4 xs:w-3 sm:w-3 h-4 xs:h-3 sm:h-3 object-contain" /> bcegovbuilders.com</div></li>
+              <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/call_icon.png" alt="callto" className="w-4 xs:w-3 sm:w-3 h-4 xs:h-3 sm:h-3 object-contain" /> (480) 770-6555</div></li>
+              <li><div className="flex items-center gap-x-2 text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg"><img src="/images/address_icon.png" alt="addressto" className="w-4 xs:w-3 sm:w-3 h-4 xs:h-3 sm:h-3 object-contain" />18444 N. 25th Avenue Suite 420, Phoenix, AZ 85023, USA</div></li>
               <li></li>
             </ul>
           </motion.div>

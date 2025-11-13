@@ -8,46 +8,90 @@ const PastPerformance = () => {
 
   const projects = [
     {
-      name: 'Downtown Office Complex',
-      type: 'Commercial',
-      year: '2023',
-      description: '15-story office building with modern amenities',
-      image: '/images/bce_logo.png',
+      name: 'LEIDOS',
+      type: 'FEDERAL SUBCONTRACTOR',
+      year: 'ACTIVE',
+      description: 'FEDERALTM - P010262277 | PROFESSIONAL WORKFORCE COMPLIANCE DEVELOPMENT | NATIONWIDE | $5.2M',
+      image: '/images/bce_pp_logo.png',
     },
     {
-      name: 'Riverside Residential',
-      type: 'Residential',
-      year: '2023',
-      description: '200-unit luxury residential development',
-      image: '/images/bce_logo.png',
+      name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER',
+      type: 'COMMERCIAL',
+      year: 'COMPLETE',
+      description: '207302 | COURSE OF CONSTRUCTION | SEATTLE, WA',
+      image: '/images/bce_pp_logo.png',
     },
     {
-      name: 'Highway Infrastructure',
-      type: 'Infrastructure',
-      year: '2022',
-      description: 'Major highway expansion project',
-      image: '/images/bce_logo.png',
+      name: 'EVERGREEN MIDDLE SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0036 | POST - CONSTRUCTION | REDMOND, WA',
+      image: '/images/bce_pp_logo.png',
     },
     {
-      name: 'Shopping Mall Renovation',
-      type: 'Renovation',
-      year: '2022',
-      description: 'Complete renovation of 50,000 sq ft mall',
-      image: '/images/bce_logo.png',
+      name: 'KIRKLAND MIDDLE SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0029 | COURSE OF CONSTRUCTION | KIRKLAND, WA',
+      image: '/images/bce_pp_logo.png',
     },
     {
-      name: 'Government Building',
-      type: 'Commercial',
-      year: '2021',
-      description: 'State-of-the-art government facility',
-      image: '/images/bce_logo.png',
+      name: 'FINN HILL MIDDLE SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0028 | COURSE OF CONSTRUCTION | KIRKLAND, WA',
+      image: '/images/bce_pp_logo.png',
     },
     {
-      name: 'Educational Campus',
-      type: 'Institutional',
-      year: '2021',
-      description: 'Multi-building university campus expansion',
-      image: '/images/bce_logo.png',
+      name: 'REDMOND HIGH SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0032 | POST- CONSTRUCTION | REDMOND, WA',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'INGLEWOOD MIDDLE SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0027 | POST- CONSTRUCTION | SAMMAMISH, WA',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'ROSE HILL MIDDLE SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0034 | COURSE OF CONSTRUCTION | REDMOND, WA',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'INTERNATIONAL COMMUNITY SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0030 | POST- CONSTRUCTION | KIRKLAND, WA',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'LAKE WASHINGTON HIGH SCHOOL',
+      type: 'COUNTY GOVERNMENT',
+      year: 'COMPLETE',
+      description: '73880-0026 | POST- CONSTRUCTION | KIRKLAND, WA',
+      image: '/images/bce_pp_logo.png',
+    },
+
+    {
+      name: '',
+      type: '',
+      year: '',
+      description: '',
+      image: '/images/bce_pp_logo.png',
+    },
+
+    {
+      name: '',
+      type: '',
+      year: '',
+      description: '',
+      image: '/images/bce_pp_logo.png',
     },
   ]
 
@@ -116,13 +160,13 @@ const PastPerformance = () => {
             >
               {/* Background Image */}
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-110"
+                className="absolute inset-0 bg-fit bg-[#61b5d6] bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-110"
                 style={{
                   backgroundImage: `url(${project.image})`,
                 }}
               >
                 {/* Dark Overlay for better text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 group-hover:from-black/70 group-hover:via-black/50 group-hover:to-black/30 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/20 group-hover:from-black/50 group-hover:via-black/30 group-hover:to-black/10 transition-colors duration-300" />
               </div>
 
               {/* Content */}
