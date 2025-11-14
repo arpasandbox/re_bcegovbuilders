@@ -1,24 +1,29 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import PastPerformance from './components/PastPerformance'
-import Certifications from './components/Certifications'
-import AboutUs from './components/AboutUs'
-import ContactUs from './components/ContactUs'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
+import Careers from './pages/Careers'
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Services />
-      <PastPerformance />
-      <Certifications />
-      <AboutUs />
-      <ContactUs />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <Home />
+              <Footer />
+            </>
+          } />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/careers" element={<Careers />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

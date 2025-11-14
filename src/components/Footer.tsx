@@ -1,20 +1,21 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const footerLinks = {
     company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Services', href: '#services' },
-      { name: 'Projects', href: '#projects' },
-      { name: 'Certifications', href: '#certifications' },
+      { name: 'About Us', href: '#about', isHash: true },
+      { name: 'Services', href: '#services', isHash: true },
+      { name: 'Projects', href: '#projects', isHash: true },
+      { name: 'Certifications', href: '#certifications', isHash: true },
     ],
     resources: [
-      { name: 'Contact', href: '#contact' },
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' },
-      { name: 'Careers', href: '#' },
+      { name: 'Contact', href: '#contact', isHash: true },
+      { name: 'Privacy Policy', href: '/privacy-policy', isHash: false },
+      { name: 'Terms of Service', href: '/terms-of-service', isHash: false },
+      { name: 'Careers', href: '/careers', isHash: false },
     ],
   }
 
@@ -72,12 +73,21 @@ const Footer = () => {
             <ul className="space-y-2 xs:space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-2 xl:space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg hover:text-secondary transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  {link.isHash ? (
+                    <a
+                      href={link.href}
+                      className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg hover:text-secondary transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg hover:text-secondary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -94,12 +104,21 @@ const Footer = () => {
             <ul className="space-y-2 xs:space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-2 xl:space-y-3">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg hover:text-secondary transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  {link.isHash ? (
+                    <a
+                      href={link.href}
+                      className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg hover:text-secondary transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg hover:text-secondary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

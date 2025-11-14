@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link, useLocation } from 'react-router-dom'
 
  const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -10,6 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,39 +44,63 @@ const Navbar = () => {
       <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2 xs:w-[200px] xs:h-[40px] sm:w-[200px] sm:h-[40px] lg:w-[200px] lg:h-[56px]">
+          <Link to="/">
+            <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2 xs:w-[200px] xs:h-[40px] sm:w-[200px] sm:h-[40px] lg:w-[200px] lg:h-[56px] cursor-pointer">
 
-            <img src="/images/bce_logo3.svg" alt="BCE Construction Inc Logo" 
-              className={`transition-all duration-300 ${isScrolled 
-                  ? 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
-                  : 'hidden' 
-              } w-auto`}/>
+              <img src="/images/bce_logo3.svg" alt="BCE Construction Inc Logo" 
+                className={`transition-all duration-300 ${isScrolled 
+                    ? 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
+                    : 'hidden' 
+                } w-auto`}/>
 
-            <img src="/images/bce_logo3_w.svg" alt="BCE Construction Inc Logo" 
-              className={`transition-all duration-300 ${isScrolled 
-                  ? 'hidden' 
-                  : 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
-              } w-auto`}/>
+              <img src="/images/bce_logo3_w.svg" alt="BCE Construction Inc Logo" 
+                className={`transition-all duration-300 ${isScrolled 
+                    ? 'hidden' 
+                    : 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
+                } w-auto`}/>
 
-          </motion.div>
+            </motion.div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="xs:hidden sm:hidden md:hidden flex items-center space-x-3 xs:space-x-3 sm:space-x-3 md:space-x-4 lg:space-x-6 xl:space-x-8 xl1:space-x-10 xl2:space-x-12">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
-                className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
-                  isScrolled ? 'text-secondary hover:text-accent' : 'text-white hover:text-accent'
-                }`}
-              >
-                {link.name}
-              </motion.a>
-            ))}
+            {navLinks.map((link, index) => {
+              if (link.name === 'Home') {
+                return (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <Link
+                      to="/"
+                      className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
+                        isScrolled ? 'text-secondary hover:text-accent'  : 'text-white hover:text-accent'
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                )
+              }
+              return (
+                <motion.a
+                  key={link.name}
+                  href={location.pathname === '/' ? link.href : `/${link.href}`}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.1 }}
+                  className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
+                    isScrolled ? 'text-secondary hover:text-accent' : 'text-white hover:text-accent'
+                  }`}
+                >
+                  {link.name}
+                </motion.a>
+              )
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -114,16 +140,30 @@ const Navbar = () => {
             className="lg:hidden bg-white shadow-lg"
           >
             <div className="container mx-auto px-2 xs:px-2 sm:px-4 py-3 xs:py-3 sm:py-4 space-y-2 xs:space-y-2 sm:space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-gray-700 hover:text-secondary font-medium transition-colors text-sm xs:text-sm sm:text-base md:text-base py-1 xs:py-1 sm:py-2 md:py-2"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                if (link.name === 'Home') {
+                  return (
+                    <Link
+                      key={link.name}
+                      to="/"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block text-gray-700 hover:text-secondary font-medium transition-colors text-sm xs:text-sm sm:text-base md:text-base py-1 xs:py-1 sm:py-2 md:py-2"
+                    >
+                      {link.name}
+                    </Link>
+                  )
+                }
+                return (
+                  <a
+                    key={link.name}
+                    href={location.pathname === '/' ? link.href : `/${link.href}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-gray-700 hover:text-secondary font-medium transition-colors text-sm xs:text-sm sm:text-base md:text-base py-1 xs:py-1 sm:py-2 md:py-2"
+                  >
+                    {link.name}
+                  </a>
+                )
+              })}
             </div>
           </motion.div>
         )}
