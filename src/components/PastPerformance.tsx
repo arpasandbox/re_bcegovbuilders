@@ -261,8 +261,8 @@ const PastPerformance = () => {
                   
                   {/* Description - hidden by default, shown on hover (desktop) or click (mobile) */}
 
-                  <div className={`transition-all duration-300 overflow-hidden ${showDetails ? 'max-h-32 xs:max-h-32 sm:max-h-36 md:max-h-40 lg:max-h-44 xl:max-h-48 opacity-100' 
-                      : isMobile ? 'max-h-0 opacity-0' : 'max-h-0 opacity-0 lg:group-hover:max-h-44 lg:group-hover:opacity-100 xl:group-hover:max-h-48 xl:group-hover:opacity-100 xl1:group-hover:max-h-48 xl1:group-hover:opacity-100'
+                  <div className={`transition-all duration-300 overflow-hidden ${showDetails ? 'max-h-32 xs:max-h-32 sm:max-h-36 md:max-h-40 lg:max-h-44 xl:max-h-48 xl2:max-h-48 opacity-100' 
+                      : isMobile ? 'max-h-0 opacity-0' : 'max-h-0 opacity-0 lg:group-hover:max-h-44 lg:group-hover:opacity-100 xl:group-hover:max-h-48 xl:group-hover:opacity-100 xl1:group-hover:max-h-48 xl1:group-hover:opacity-100 xl2:group-hover:max-h-48 xl2:group-hover:opacity-100'
                   }`}>
                     <p className="text-white/90 text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm xl1:text-base xl2:text-base pt-2 xs:pt-2 sm:pt-2 md:pt-3 lg:pt-3 xl:pt-3">
                       {project.project}

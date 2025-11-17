@@ -33,111 +33,109 @@ const AboutUs = () => {
     <section
       id="about"
       ref={ref}
-      className="py-10 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 xl1:py-28 xl2:py-32 bg-gray-100"
+      className="py-8 xs:py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 xl1:py-24 xl2:py-28 bg-gray-100"
     >
-      <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
+      <div className="container mx-auto px-4 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 xl1:px-14 xl2:px-16">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
+          className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16"
         >
-          <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-secondary mb-2 xs:mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-6">
+          <h2 className="text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl1:text-6xl xl2:text-7xl font-bold text-secondary mb-3 xs:mb-3 sm:mb-4 md:mb-4 lg:mb-5 xl:mb-6">
             About Us
           </h2>
-          <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
-            {/* Building trust through excellence for over 25 years */}
-          </p>
+          {/* <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-3xl mx-auto">
+            Building trust through excellence for over 25 years
+          </p> */}
         </motion.div>
 
-        <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 items-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
+        {/* Mission and Vision Side by Side */}
+        <div className="grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-12 mb-10 xs:mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20">
+          {/* Mission Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="h-full"
           >
-            <h3 className="text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xl1:text-3xl xl2:text-4xl font-bold text-secondary mb-4 xs:mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
-              BCE Construction Inc
-            </h3>
-            <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-gray-600 mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">
-              A service-disabled veteran-owned small business,
-              delivers accomplished sitework, infrastructure, vertical construction, and
-              specialty facility services. Our certified professionals uphold rigorous
-              standards of safety, quality, and compliance serving government and
-              commercial clients nationwide with dependable, code-compliant results.
-            </p>
-            {/* <p className="text-gray-600 mb-4 text-lg">
-              Our team of experienced professionals brings together expertise in architecture,
-              engineering, project management, and construction to deliver projects that exceed
-              expectations. We pride ourselves on building lasting relationships with our
-              clients, partners, and communities.
-            </p>
-            <p className="text-gray-600 text-lg">
-              Today, we continue to grow and evolve, always maintaining our core values of
-              quality, safety, innovation, and integrity in everything we do.
-            </p> */}
+            <div className="bg-white rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-8 lg:p-10 xl:p-12 h-full flex flex-col">
+              <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-5 md:mb-5 lg:mb-6 xl:mb-8">
+                <div className="text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl mr-3 xs:mr-3 sm:mr-4">🎯</div>
+                <h3 className="text-xl xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl xl1:text-4xl xl2:text-4xl font-bold text-secondary">
+                  Our Mission
+                </h3>
+              </div>
+              <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-gray-700 text-center leading-relaxed flex-grow">
+                To deliver exceptional construction services that exceed client expectations through 
+                unwavering commitment to quality, safety, and innovation. As a service-disabled 
+                veteran-owned small business, we are dedicated to serving government and commercial 
+                clients nationwide with dependable, code-compliant results that build lasting 
+                relationships and strengthen communities.
+              </p>
+            </div>
           </motion.div>
 
+          {/* Vision Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-secondary to-accent p-4 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl text-white"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="h-full"
           >
-            <h3 className="text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xl1:text-3xl xl2:text-4xl font-bold mb-4 xs:mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">Why Choose Us?</h3>
-            <ul className="space-y-2 xs:space-y-2 sm:space-y-3 md:space-y-3 lg:space-y-4 xl:space-y-5">
-              <li className="flex items-start">
-                <span className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl mr-2 xs:mr-2 sm:mr-2 md:mr-3 lg:mr-3 xl:mr-4">✓</span>
-                <span className="text-sm xs:text-sm sm:text-base md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl">25+ years of proven experience</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl mr-2 xs:mr-2 sm:mr-2 md:mr-3 lg:mr-3 xl:mr-4">✓</span>
-                <span className="text-sm xs:text-sm sm:text-base md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl">Licensed, bonded, and insured</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl mr-2 xs:mr-2 sm:mr-2 md:mr-3 lg:mr-3 xl:mr-4">✓</span>
-                <span className="text-sm xs:text-sm sm:text-base md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl">Full-service construction solutions</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl mr-2 xs:mr-2 sm:mr-2 md:mr-3 lg:mr-3 xl:mr-4">✓</span>
-                <span className="text-sm xs:text-sm sm:text-base md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl">On-time and on-budget delivery</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl mr-2 xs:mr-2 sm:mr-2 md:mr-3 lg:mr-3 xl:mr-4">✓</span>
-                <span className="text-sm xs:text-sm sm:text-base md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl">Dedicated project management</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl mr-2 xs:mr-2 sm:mr-2 md:mr-3 lg:mr-3 xl:mr-4">✓</span>
-                <span className="text-sm xs:text-sm sm:text-base md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl">Commitment to sustainability</span>
-              </li>
-            </ul>
+            <div className="bg-gradient-to-br from-secondary to-accent rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-8 lg:p-10 xl:p-12 text-white h-full flex flex-col">
+              <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-5 md:mb-5 lg:mb-6 xl:mb-8">
+                <div className="text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl mr-3 xs:mr-3 sm:mr-4">👁️</div>
+                <h3 className="text-xl xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl xl1:text-4xl xl2:text-4xl font-bold">
+                  Our Vision
+                </h3>
+              </div>
+              <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-white/95 text-center leading-relaxed flex-grow">
+                To be the premier construction partner recognized for excellence in sitework, 
+                infrastructure, vertical construction, and specialty facility services. We envision 
+                a future where every project we undertake sets new standards for quality, safety, 
+                and sustainability, while maintaining our core values and commitment to serving 
+                those who have served our nation.
+              </p>
+            </div>
           </motion.div>
         </div>
 
-        {/* Values */}
+        {/* Core Values Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <h3 className="text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xl1:text-3xl xl2:text-4xl font-bold text-secondary mb-6 xs:mb-6 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-10 text-center">
-            Our Core Values
-          </h3>
-          <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8">
+          <div className="text-center mb-6 xs:mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14">
+            <div className="flex items-center justify-center mb-3 xs:mb-3 sm:mb-4 md:mb-4 lg:mb-5 xl:mb-6">
+              <div className="text-4xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl mr-3 xs:mr-3 sm:mr-4">💎</div>
+              <h3 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl xl1:text-4xl xl2:text-5xl font-bold text-secondary">
+                Our Core Values
+              </h3>
+            </div>
+            <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-gray-600 max-w-2xl mx-auto">
+              The principles that guide everything we do
+            </p>
+          </div>
+          <div className="grid grid-cols-3 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white p-4 xs:p-4 sm:p-5 md:p-5 lg:p-6 xl:p-8 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md text-center"
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="bg-white p-5 xs:p-5 sm:p-6 md:p-6 lg:p-7 xl:p-8 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl text-center transition-all duration-300"
               >
-                <div className="text-3xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">{value.icon}</div>
-                <h4 className="text-base xs:text-base sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-3">
+                <div className="text-4xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl mb-3 xs:mb-3 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-5">{value.icon}</div>
+                <h4 className="text-base xs:text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl xl1:text-xl xl2:text-2xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-3 md:mb-3 lg:mb-3 xl:mb-4">
                   {value.title}
                 </h4>
-                <p className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base xl1:text-base xl2:text-lg text-gray-600">{value.description}</p>
+                <p className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-base xl2:text-lg text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
           </div>
