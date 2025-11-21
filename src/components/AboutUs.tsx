@@ -6,28 +6,6 @@ const AboutUs = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
-  const values = [
-    {
-      title: 'Quality First',
-      description: 'We never compromise on quality, ensuring every project meets the highest standards.',
-      icon: '⭐',
-    },
-    {
-      title: 'Safety Commitment',
-      description: 'Safety is our top priority in every aspect of our operations.',
-      icon: '🛡️',
-    },
-    {
-      title: 'Innovation',
-      description: 'We embrace new technologies and methods to deliver better results.',
-      icon: '💡',
-    },
-    {
-      title: 'Integrity',
-      description: 'Honest, transparent communication and ethical business practices.',
-      icon: '🤝',
-    },
-  ]
 
   return (
     <section
@@ -108,36 +86,16 @@ const AboutUs = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="text-center mb-6 xs:mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14">
-            <div className="flex items-center justify-center mb-3 xs:mb-3 sm:mb-4 md:mb-4 lg:mb-5 xl:mb-6">
+          <div className="bg-gradient-to-br from-secondary to-accent rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 text-white h-full flex flex-col">
+            <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-5 md:mb-5 lg:mb-6 xl:mb-8">
               <div className="text-4xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl mr-3 xs:mr-3 sm:mr-4">💎</div>
-              <h3 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl xl1:text-4xl xl2:text-5xl font-bold text-secondary">
+              <h3 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl xl1:text-4xl xl2:text-5xl font-bold">
                 Our Core Values
               </h3>
             </div>
-            <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-gray-600 max-w-2xl mx-auto">
-              The principles that guide everything we do
+            <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-white/95 text-center leading-relaxed flex-grow">
+              Quality, safety, innovation, and integrity are the foundational principles that guide every decision we make and every project we undertake. We never compromise on quality, ensuring every project meets the highest standards. Safety is our top priority in every aspect of our operations. We embrace new technologies and methods to deliver better results, while maintaining honest, transparent communication and ethical business practices in all our interactions.
             </p>
-          </div>
-          <div className="grid grid-cols-3 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white p-5 xs:p-5 sm:p-6 md:p-6 lg:p-7 xl:p-8 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl text-center transition-all duration-300"
-              >
-                <div className="text-4xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl mb-3 xs:mb-3 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-5">{value.icon}</div>
-                <h4 className="text-base xs:text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl xl1:text-xl xl2:text-2xl font-bold text-gray-900 mb-2 xs:mb-2 sm:mb-3 md:mb-3 lg:mb-3 xl:mb-4">
-                  {value.title}
-                </h4>
-                <p className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-base xl2:text-lg text-gray-600 leading-relaxed">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </div>
