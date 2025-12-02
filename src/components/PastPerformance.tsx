@@ -32,13 +32,23 @@ const PastPerformance = () => {
       image: '/images/bce_pp_logo.png',
     },
     {
+      name: 'CITY OF BELLEVUE NEW WAY OF WORK (NWOW)',
+      type: 'COMMERCIAL',
+      status: 'COMPLETE',
+      project: '740400019',
+      description: 'COURSE OF CONSTRUCTION',
+      location:'BELLEVUE, WA',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
       name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER',
       type: 'COMMERCIAL',
       status: 'COMPLETE',
       project: '207302',
       description: 'COURSE OF CONSTRUCTION',
       location:'SEATTLE, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -48,7 +58,7 @@ const PastPerformance = () => {
       project: '73880-0036',
       description: 'POST - CONSTRUCTION',
       location:'REDMOND, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -58,7 +68,7 @@ const PastPerformance = () => {
       project: '73880-0029',
       description: 'COURSE OF CONSTRUCTION',
       location:'KIRKLAND, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -68,7 +78,7 @@ const PastPerformance = () => {
       project: '73880-0028',
       description: 'COURSE OF CONSTRUCTION',
       location:'KIRKLAND, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -78,7 +88,7 @@ const PastPerformance = () => {
       project: '73880-0032',
       description: 'POST- CONSTRUCTION',
       location:'REDMOND, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -88,7 +98,7 @@ const PastPerformance = () => {
       project: '73880-0027',
       description: 'POST- CONSTRUCTION',
       location:'SAMMAMISH, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -98,7 +108,7 @@ const PastPerformance = () => {
       project: '73880-0034',
       description: 'COURSE OF CONSTRUCTION',
       location:'REDMOND, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -108,7 +118,7 @@ const PastPerformance = () => {
       project: '73880-0030',
       description: 'POST- CONSTRUCTION',
       location:'KIRKLAND, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
     {
@@ -118,18 +128,9 @@ const PastPerformance = () => {
       project: '73880-0026',
       description: 'POST- CONSTRUCTION',
       location:'KIRKLAND, WA',
-      price:'$0',
+      price:'',
       image: '/images/bce_pp_logo.png',
     },
-
-    {
-      name: '',
-      type: '',
-      status: '',
-      description: '',
-      image: '/images/bce_pp_logo.png',
-    },
-
     {
       name: '',
       type: '',

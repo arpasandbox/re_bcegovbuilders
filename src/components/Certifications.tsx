@@ -13,6 +13,18 @@ const Certifications = () => {
   // Certification logos from /images directory
   const certifications = [
     {
+      name: 'SDVOSB',
+      image: '/images/sdvosb-logo.png',
+    },
+    {
+      name: '8(a)+Certified',
+      image: '/images/8(a)+Certified.png',
+    },
+    {
+      name: 'ROC',
+      image: '/images/roc-logo.png',
+    },
+    {
       name: 'MBE',
       image: '/images/mbe-logo.png',
     },
@@ -23,14 +35,6 @@ const Certifications = () => {
     {
       name: 'DBE',
       image: '/images/dbe-logo.png',
-    },
-    {
-      name: 'SDVOSB',
-      image: '/images/sdvosb-logo.png',
-    },
-    {
-      name: '8(a)+Certified',
-      image: '/images/8(a)+Certified.png',
     },
   ]
 
