@@ -92,7 +92,7 @@ const Services = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gray-50 p-4 xs:p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-shadow"
+              className="bg-gray-50 p-4 xs:p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl hover:bg-gray-200 transition-shadow"
             >
               <div className="mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5 flex justify-center">
                 <img
@@ -111,7 +111,7 @@ const Services = () => {
               <h3 className="text-base xs:text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl xl1:text-2xl xl2:text-3xl font-bold text-secondary mb-2 xs:mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4">
                 {service.title}
               </h3>
-              <p className="text-xs xs:text-xs sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl text-gray-600">{service.description}</p>
+              <p className="text-base xs:text-xs sm:text-sm text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>
