@@ -24,7 +24,7 @@ const Services = () => {
     },
     {
       title: 'Foundation',
-      description: 'Designing and constructing transformer pads and foundations, including piers, driven piles, earth screws, slabs, and grade beams for robust structural support.',
+      description: 'A robust transformer pad system with secondary containment supported by cast-in-place piers, driven piles, earth screws, slab-on-grade, and grade beams for maximum structural stability and load performance.',
       icon: '/images/foundation_logo.png',
     },
     {
@@ -33,8 +33,8 @@ const Services = () => {
       icon: '/images/project_management_logo.png',
     },
     {
-      title: 'Vertical Construction',
-      description: 'Comprehensive construction services from foundations and structural framing to full MEP systems, HVAC, and high-quality interior and exterior finishes.',
+      title: 'Auxiliary Construction Services',
+      description: 'Comprehensive structural and interior construction services covering wood and light-gauge steel framing, full building envelope systems, rough-in MEP and HVAC, and complete interior buildouts and tenant improvements.',
       icon: '/images/vertical_construction_logo.png',
     },
   ]
