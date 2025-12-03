@@ -21,6 +21,10 @@ const Certifications = () => {
       image: '/images/8(a)+Certified.png',
     },
     {
+      name: '8(a)+Certified',
+      image: '/images/sba-logo.png',
+    },
+    {
       name: 'ROC',
       image: '/images/roc-logo.png',
     },

@@ -29,6 +29,28 @@ const AboutUs = () => {
           </p> */}
         </motion.div>
 
+        {/* BCE Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="bg-gray-50 rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 mb-10 xs:mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20 text-secondary h-full flex flex-col">
+            <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-5 md:mb-5 lg:mb-6 xl:mb-8">
+              {/* <div className="text-4xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl mr-3 xs:mr-3 sm:mr-4">💎</div> */}
+              <h3 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl xl1:text-4xl xl2:text-5xl font-bold">
+              </h3>
+            </div>
+            <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-secondary text-center leading-relaxed flex-grow">
+              A service-disabled veteran-owned small business,
+              delivers accomplished sitework, infrastructure, vertical construction, and
+              specialty facility services. Our certified professionals uphold rigorous
+              standards of safety, quality, and compliance serving government and
+              commercial clients nationwide with dependable, code-compliant results.
+            </p>
+          </div>
+        </motion.div>
+
         {/* Mission and Vision Side by Side */}
         <div className="grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-12 mb-10 xs:mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20">
           {/* Mission Section */}
@@ -40,7 +62,7 @@ const AboutUs = () => {
           >
             <div className="bg-white rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-8 lg:p-10 xl:p-12 h-full flex flex-col">
               <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-5 md:mb-5 lg:mb-6 xl:mb-8">
-                <div className="text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl mr-3 xs:mr-3 sm:mr-4">🎯</div>
+                {/* <div className="text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl mr-3 xs:mr-3 sm:mr-4">🎯</div> */}
                 <h3 className="text-xl xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl xl1:text-4xl xl2:text-4xl font-bold text-secondary">
                   Our Mission
                 </h3>
@@ -64,7 +86,7 @@ const AboutUs = () => {
           >
             <div className="bg-gradient-to-br from-secondary to-accent rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-8 lg:p-10 xl:p-12 text-white h-full flex flex-col">
               <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-5 md:mb-5 lg:mb-6 xl:mb-8">
-                <div className="text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl mr-3 xs:mr-3 sm:mr-4">👁️</div>
+                {/* <div className="text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl mr-3 xs:mr-3 sm:mr-4">👁️</div> */}
                 <h3 className="text-xl xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl xl1:text-4xl xl2:text-4xl font-bold">
                   Our Vision
                 </h3>
@@ -86,14 +108,14 @@ const AboutUs = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="bg-gradient-to-br from-secondary to-accent rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 text-white h-full flex flex-col">
+          <div className="bg-gray-50 rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg p-6 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 text-secondary h-full flex flex-col">
             <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-5 md:mb-5 lg:mb-6 xl:mb-8">
-              <div className="text-4xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl mr-3 xs:mr-3 sm:mr-4">💎</div>
+              {/* <div className="text-4xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl mr-3 xs:mr-3 sm:mr-4">💎</div> */}
               <h3 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl xl1:text-4xl xl2:text-5xl font-bold">
                 Our Core Values
               </h3>
             </div>
-            <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-white/95 text-center leading-relaxed flex-grow">
+            <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg xl1:text-xl xl2:text-xl text-secondary text-center leading-relaxed flex-grow">
               Quality, safety, innovation, and integrity are the foundational principles that guide every decision we make and every project we undertake. We never compromise on quality, ensuring every project meets the highest standards. Safety is our top priority in every aspect of our operations. We embrace new technologies and methods to deliver better results, while maintaining honest, transparent communication and ethical business practices in all our interactions.
             </p>
           </div>
