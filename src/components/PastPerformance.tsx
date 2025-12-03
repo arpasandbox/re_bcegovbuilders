@@ -42,6 +42,16 @@ const PastPerformance = () => {
       image: '/images/bce_pp_logo.png',
     },
     {
+      name: 'SAULSBURY',
+      type: 'COMMERCIAL',
+      status: 'COMPLETE',
+      project: 'C10818-07',
+      description: 'SECURITY SERVICES',
+      location:'DATELAND, AZ',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
       name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER',
       type: 'COMMERCIAL',
       status: 'COMPLETE',
@@ -130,14 +140,7 @@ const PastPerformance = () => {
       location:'KIRKLAND, WA',
       price:'',
       image: '/images/bce_pp_logo.png',
-    },
-    {
-      name: '',
-      type: '',
-      status: '',
-      description: '',
-      image: '/images/bce_pp_logo.png',
-    },
+    },    
   ]
 
   // const stats = [
