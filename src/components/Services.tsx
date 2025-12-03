@@ -8,33 +8,33 @@ const Services = () => {
 
   const services = [
     {
-      title: 'Cabling',
-      description: 'Implementing SCADA/HMI systems and high-speed fiber/Cat6 networks, including installation, testing, and CAN bridge integration for real-time control.',
+      title: 'Cabling Underground',
+      description: 'End-to-end fiber-optic communication services with certified installation, testing, and 10 Gbps Cat6 cabling.',
       icon: '/images/cabling_logo.png',
     },
     {
-      title: 'Civil Construction',
-      description: 'Providing comprehensive site development services, including directional drilling, grading, excavation, foundations, concrete, substation build-outs, earthworks, and paving.',
+      title: 'Sitework & Civil Construction',
+      description: 'Expert grading, drainage, concrete flatwork, substation build-outs, full site preparation, and durable road and paving solutions.',
       icon: '/images/civil_construction_logo.png',
     },
     {
-      title: 'Electrical Construction',
-      description: 'Delivering commercial and industrial improvements, utility-scale solar and wind T&D, decommissioning, and EV charging infrastructure installation and integration.',
+      title: 'Energy and Electrical Construction',
+      description: 'Full-scope TI, renewable energy, T&D, decommissioning, EV charging deployment, and expert BESS/substation protection and control management.',
       icon: '/images/electrical_construction_logo.png',
     },
     {
       title: 'Foundation',
-      description: 'A robust transformer pad system with secondary containment supported by cast-in-place piers, driven piles, earth screws, slab-on-grade, and grade beams for maximum structural stability and load performance.',
+      description: 'Delivering engineered transformer pads with containment, structural driven piles, precision slab-on-grade work, and turnkey MEP installation.',
       icon: '/images/foundation_logo.png',
     },
     {
-      title: 'Project Management',
-      description: 'Overseeing every phase of the project, from engineering and permitting to onsite management, quality assurance, and full procurement services.',
+      title: 'Onsite Construction Management',
+      description: 'End-to-end project leadership covering management, engineering, permitting, QA/QC, and full procurement.',
       icon: '/images/project_management_logo.png',
     },
     {
       title: 'Auxiliary Construction Services',
-      description: 'Comprehensive structural and interior construction services covering wood and light-gauge steel framing, full building envelope systems, rough-in MEP and HVAC, and complete interior buildouts and tenant improvements.',
+      description: 'Expert structural framing, building envelope solutions, rough-in MEP/HVAC, and turnkey interior buildouts and TI work.',
       icon: '/images/vertical_construction_logo.png',
     },
   ]
