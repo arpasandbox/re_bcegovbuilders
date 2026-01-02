@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const PastPerformance = () => {
   const ref = useRef(null)
@@ -53,6 +54,7 @@ const PastPerformance = () => {
     },
     {
       name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER',
+      name1: 'B WING REHAB PLASTER ROOM',
       type: 'COMMERCIAL',
       status: 'COMPLETE',
       project: '207302',
@@ -195,9 +197,9 @@ const PastPerformance = () => {
         </motion.div> */}
 
         {/* Projects Grid */}
-        <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 grid-cols-3 gap-10 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10">
+        <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-3 gap-10 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
           
-          {projects.map((project, index) => {
+          {projects.slice(0, 6).map((project, index) => {
             const isActive = activeCard === index
             const showDetails = isActive
             const isEmpty = !project.name || !project.description
@@ -243,8 +245,11 @@ const PastPerformance = () => {
                         {project.status}
                       </span>
                     </div>
-                    <h3 className="text-base xs:text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl xl1:text-2xl xl2:text-2xl font-bold text-white mb-1 xs:mb-1 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-2">
+                    <h3 className="text-base xs:text-base sm:text-md md:text-md lg:text-xl xl:text-xl xl1:text-2xl xl2:text-2xl font-bold text-white mb-1 xs:mb-1 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-2">
                       {project.name}
+                    </h3>
+                    <h3 className="text-base xs:text-base sm:text-sm md:text-sm lg:text-md xl:text-md xl1:text-2xl xl2:text-2xl font-semibold text-white mb-1 xs:mb-1 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-2">
+                      {project.name1}
                     </h3>
                   </div>
 
@@ -293,6 +298,36 @@ const PastPerformance = () => {
             )
           })}
         </div>
+
+        {/* See All Link */}
+        {projects.length > 6 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="text-center"
+          >
+            <Link
+              to="/past-performance"
+              className="inline-flex items-center px-6 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-14 py-3 xs:py-3 sm:py-3 md:py-4 lg:py-4 xl:py-5 bg-gradient-to-r from-secondary to-accent text-white font-semibold text-sm xs:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              See All Projects
+              <svg
+                className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   )

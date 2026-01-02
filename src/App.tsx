@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 import Careers from './pages/Careers'
+import AllPastPerformance from './pages/AllPastPerformance'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/past-performance" element={<AllPastPerformance />} />
         </Routes>
       </div>
     </Router>
