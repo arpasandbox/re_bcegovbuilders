@@ -9,32 +9,32 @@ const Services = () => {
   const services = [
     {
       title: 'Cabling Underground',
-      description: 'End-to-end fiber-optic communication services with certified installation, testing, and 10 Gbps Cat6 cabling.',
+      description: 'End-to-end electrical and data cabling installation, termination, and testing.',
       icon: '/images/cabling_logo.png',
     },
     {
       title: 'Sitework & Civil Construction',
-      description: 'Expert grading, drainage, concrete flatwork, substation build-outs, full site preparation, and durable road and paving solutions.',
+      description: 'Building the foundation of critical infrastructure, from earthwork to final pavement.',
       icon: '/images/civil_construction_logo.png',
     },
     {
       title: 'Energy and Electrical Construction',
-      description: 'Full-scope TI, renewable energy, T&D, decommissioning, EV charging deployment, and expert BESS/substation protection and control management.',
+      description: 'Advanced energy systems delivery spanning solar, Transmission and Distribution, storage, Electric Vehicle charging, and microgrids.',
       icon: '/images/electrical_construction_logo.png',
     },
     {
       title: 'Foundation',
-      description: 'Delivering engineered transformer pads with containment, structural driven piles, precision slab-on-grade work, and turnkey MEP installation.',
+      description: 'Structural and Mechanical/Electrical/Plumbing construction for critical power infrastructure, from deep foundations to finished slabs.',
       icon: '/images/foundation_logo.png',
     },
     {
-      title: 'Onsite Construction Management',
-      description: 'End-to-end project leadership covering management, engineering, permitting, QA/QC, and full procurement.',
+      title: 'Quality Assurance / Quality Control',
+      description: 'End-to-end project delivery services from engineering and permitting through procurement and construction oversight.',
       icon: '/images/project_management_logo.png',
     },
     {
       title: 'Auxiliary Construction Services',
-      description: 'Expert structural framing, building envelope solutions, rough-in MEP/HVAC, and turnkey interior buildouts and TI work.',
+      description: 'Comprehensive structural, envelope, Mechanical, Electrical, and Plumbing/Heating, Ventilation, and Air Conditioning, and turnkey Tenant Improvement construction services.',
       icon: '/images/vertical_construction_logo.png',
     },
   ]
@@ -85,14 +85,14 @@ const Services = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-cols-3 gap-10 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10"
+          className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-cols-3 gap-10 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gray-50 p-4 xs:p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl hover:bg-gray-200 transition-shadow"
+              className="bg-gray-50 xs:p-4 sm:p-5 md:p-6 lg:p-8 p-14 rounded-lg xs:rounded-lg sm:rounded-xl shadow-md hover:shadow-xl hover:bg-gray-200 transition-shadow"
             >
               <div className="mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5 flex justify-center">
                 <img
