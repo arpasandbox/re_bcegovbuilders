@@ -1,8 +1,16 @@
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useEffect } from 'react'
 
 const PrivacyPolicy = () => {
+
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Navbar />

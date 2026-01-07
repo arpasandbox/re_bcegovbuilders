@@ -1,8 +1,15 @@
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useEffect } from 'react'
 
 const Careers = () => {
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+  }, [])
+
   const benefits = [
     {
       title: 'Competitive Compensation',
