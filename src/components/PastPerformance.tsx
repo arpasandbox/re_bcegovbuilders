@@ -23,6 +23,16 @@ const PastPerformance = () => {
 
   const projects = [
     {
+      name: 'VA TUCSON PARKING LOT SOLAR PV',
+      type: 'FEDERAL PRIME CONTRACT, SDVOSB SET-ASIDE',
+      status: 'PENDING',
+      project: '762-24-103',
+      description: 'NOTICE TO PROCEED (NTP)',
+      location:'TUCSON, AZ',
+      price:'$2.2M',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
       name: 'LEIDOS',
       type: 'FEDERAL SUBCONTRACTOR',
       status: 'ACTIVE',
@@ -30,6 +40,16 @@ const PastPerformance = () => {
       description: 'PROFESSIONAL WORKFORCE COMPLIANCE DEVELOPMENT',
       location:'NATIONWIDE',
       price:'$5.2M',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'MCFARLAND SOLAR 1',
+      type: 'COMMERCIAL',
+      status: 'ACTIVE',
+      project: 'C10818',
+      description: 'POST- CONSTRUCTION',
+      location:'DATELAND, AZ',
+      price:'$2M',
       image: '/images/bce_pp_logo.png',
     },
     {
