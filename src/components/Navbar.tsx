@@ -30,13 +30,19 @@ const Navbar = () => {
     { name: 'Contact', href: '#contact' },
   ]
 
+  const isPastPerformancePage = location.pathname === '/past-performance'
+  const isPrivacyPolicyPage = location.pathname === '/privacy-policy'
+  
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isPastPerformancePage || isPrivacyPolicyPage
+          ? 'bg-white shadow-lg py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-3 xl1:py-4 xl2:py-4'
+          : isScrolled
           ? 'bg-white shadow-lg py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-3 xl1:py-4 xl2:py-4'
           : 'bg-transparent py-3 xs:py-3 sm:py-4 md:py-4 lg:py-5 xl:py-5 xl1:py-6 xl2:py-6'
       }`}
@@ -48,13 +54,15 @@ const Navbar = () => {
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2 xs:w-[200px] xs:h-[40px] sm:w-[200px] sm:h-[40px] lg:w-[200px] lg:h-[56px] cursor-pointer">
 
               <img src="/images/bce_logo3.svg" alt="BCE Construction Inc Logo" 
-                className={`transition-all duration-300 ${isScrolled 
+                className={`transition-all duration-300 ${
+                  isPastPerformancePage || isPrivacyPolicyPage || isScrolled
                     ? 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
                     : 'hidden' 
                 } w-auto`}/>
 
               <img src="/images/bce_logo3_w.svg" alt="BCE Construction Inc Logo" 
-                className={`transition-all duration-300 ${isScrolled 
+                className={`transition-all duration-300 ${
+                  isPastPerformancePage || isPrivacyPolicyPage || isScrolled
                     ? 'hidden' 
                     : 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
                 } w-auto`}/>
@@ -77,7 +85,11 @@ const Navbar = () => {
                     <Link
                       to="/"
                       className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
-                        isScrolled ? 'text-secondary hover:text-accent'  : 'text-white hover:text-accent'
+                        isPastPerformancePage || isPrivacyPolicyPage
+                          ? 'text-secondary hover:text-accent'
+                          : isScrolled
+                          ? 'text-secondary hover:text-accent'
+                          : 'text-white hover:text-accent'
                       }`}
                     >
                       {link.name}
@@ -94,7 +106,11 @@ const Navbar = () => {
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.1 }}
                   className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
-                    isScrolled ? 'text-secondary hover:text-accent' : 'text-white hover:text-accent'
+                    isPastPerformancePage || isPrivacyPolicyPage
+                      ? 'text-secondary hover:text-accent'
+                      : isScrolled
+                      ? 'text-secondary hover:text-accent'
+                      : 'text-white hover:text-accent'
                   }`}
                 >
                   {link.name}
@@ -107,7 +123,11 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`xs:block sm:block md:block hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              isPastPerformancePage || isPrivacyPolicyPage
+                ? 'text-secondary hover:bg-gray-100'
+                : isScrolled
+                ? 'text-gray-900 hover:bg-gray-100'
+                : 'text-white hover:bg-white/10'
             }`}
             aria-label="Toggle menu"
           >

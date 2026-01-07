@@ -12,6 +12,11 @@ const AllPastPerformance = () => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 769)
     }
@@ -142,7 +147,87 @@ const AllPastPerformance = () => {
       location:'KIRKLAND, WA',
       price:'',
       image: '/images/bce_pp_logo.png',
-    },    
+    },
+    {
+      name: 'MCFARLAND SOLAR 1',
+      type: 'COMMERCIAL',
+      status: 'ACTIVE',
+      project: 'C10818',
+      description: 'POST- CONSTRUCTION',
+      location:'DATELAND, AZ',
+      price:'$2M',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER',
+      type: 'FEDERAL COMMERCIAL',
+      status: 'COMPLETE',
+      project: '207302',
+      description: 'COURSE OF CONSTRUCTION',
+      location:'SEATTLE, WA',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'UNIVERSITY OF WASHINGTON-NORTHWEST HOSPITAL E-WING SLEEP ROOMS',
+      type: 'HEALTHCARE',
+      status: 'COMPLETE',
+      project: '207495',
+      description: 'COURSE OF CONSTRUCTION',
+      location:'SEATTLE, WA',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER PHYSICS AND LAB RENOVATION',
+      type: 'HEALTHCARE',
+      status: 'COMPLETE',
+      project: '745100022',
+      description: 'COURSE OF CONSTRUCTION',
+      location:'SEATTLE, WA',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'EASTLAKE HIGH SCHOOL',
+      type: 'COMMERCIAL',
+      status: 'COMPLETE',
+      project: '73880-0031',
+      description: 'POST CONSTRUCTION',
+      location:'SAMMAMISH, WA',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    }, 
+    {
+      name: 'EMERSON MIDDLE SCHOOL',
+      type: 'COMMERCIAL',
+      status: 'COMPLETE',
+      project: '73880-0033',
+      description: 'COURSE OF CONSTRUCTION',
+      location:'KIRKLAND, WA',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'KAMIAKIN MIDDLE SCHOOL',
+      type: 'COMMERCIAL',
+      status: 'COMPLETE',
+      project: '73880-0037',
+      description: 'COURSE OF CONSTRUCTION',
+      location:'KIRKLAND, WA',
+      price:'',
+      image: '/images/bce_pp_logo.png',
+    },
+    {
+      name: 'VA TUCSON PARKING LOT SOLAR PV',
+      type: 'FEDERAL PRIME CONTRACT, SDVOSB SET-ASIDE',
+      status: 'PENDING',
+      project: '762-24-103',
+      description: 'NOTICE TO PROCEED (NTP)',
+      location:'TUCSON, AZ',
+      price:'$2.2M',
+      image: '/images/bce_pp_logo.png',
+    },
   ]
 
   return (
@@ -153,15 +238,15 @@ const AllPastPerformance = () => {
         ref={ref}
         className="py-10 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 xl1:py-28 xl2:py-32 bg-gray-100 min-h-screen"
       >
-        <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16">
+        <div className="container mx-auto px-2 xs:px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 xl1:px-12 xl2:px-16 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
           >
-            <div className="flex items-center justify-center mb-4 xs:mb-4 sm:mb-4 md:mb-5 lg:mb-6">
-              <Link
+            <div className="flex items-center justify-center mt-14 mb-14 xs:mb-4 sm:mb-4 md:mb-5 lg:mb-6">
+              {/* <Link
                 to="/"
                 className="mr-4 xs:mr-4 sm:mr-6 text-secondary hover:text-accent transition-colors"
               >
@@ -178,14 +263,14 @@ const AllPastPerformance = () => {
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
-              </Link>
+              </Link> */}
               <h2 className="text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl1:text-6xl xl2:text-7xl font-bold text-secondary">
-                All Past Performance
+                Past Performance
               </h2>
             </div>
-            <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
+            {/* <p className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl xl1:text-xl xl2:text-2xl text-gray-600 max-w-2xl mx-auto px-2 xs:px-2 sm:px-4">
               Complete track record of excellence and successful project delivery
-            </p>
+            </p> */}
           </motion.div>
 
           {/* Projects Grid */}
