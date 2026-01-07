@@ -11,6 +11,9 @@ export default {
         secondary: '#4b7686',
         accent: '#2596be',
       },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
       screens: {
         'xs': {'min': '1px', 'max': '320px'},
         'sm': {'min': '321px', 'max': '480px'},
