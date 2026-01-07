@@ -32,6 +32,9 @@ const Navbar = () => {
 
   const isPastPerformancePage = location.pathname === '/past-performance'
   const isPrivacyPolicyPage = location.pathname === '/privacy-policy'
+  const isTermsOfServicePage = location.pathname === '/terms-of-service'
+  const isCareersPage = location.pathname === '/careers'
+
   
 
   return (
@@ -40,7 +43,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isPastPerformancePage || isPrivacyPolicyPage
+        isPastPerformancePage || isPrivacyPolicyPage || isTermsOfServicePage || isCareersPage
           ? 'bg-white shadow-lg py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-3 xl1:py-4 xl2:py-4'
           : isScrolled
           ? 'bg-white shadow-lg py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-3 xl1:py-4 xl2:py-4'
@@ -55,14 +58,14 @@ const Navbar = () => {
 
               <img src="/images/bce_logo3.svg" alt="BCE Construction Inc Logo" 
                 className={`transition-all duration-300 ${
-                  isPastPerformancePage || isPrivacyPolicyPage || isScrolled
+                  isPastPerformancePage || isPrivacyPolicyPage || isTermsOfServicePage || isCareersPage || isScrolled
                     ? 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
                     : 'hidden' 
                 } w-auto`}/>
 
               <img src="/images/bce_logo3_w.svg" alt="BCE Construction Inc Logo" 
                 className={`transition-all duration-300 ${
-                  isPastPerformancePage || isPrivacyPolicyPage || isScrolled
+                  isPastPerformancePage || isPrivacyPolicyPage || isTermsOfServicePage || isCareersPage || isScrolled
                     ? 'hidden' 
                     : 'h-8 xs:h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 xl1:h-20 xl2:h-24' 
                 } w-auto`}/>
@@ -85,7 +88,7 @@ const Navbar = () => {
                     <Link
                       to="/"
                       className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
-                        isPastPerformancePage || isPrivacyPolicyPage
+                        isPastPerformancePage || isPrivacyPolicyPage || isTermsOfServicePage || isCareersPage
                           ? 'text-secondary hover:text-accent'
                           : isScrolled
                           ? 'text-secondary hover:text-accent'
@@ -106,7 +109,7 @@ const Navbar = () => {
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.1 }}
                   className={`text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg xl1:text-lg xl2:text-xl font-medium transition-colors ${
-                    isPastPerformancePage || isPrivacyPolicyPage
+                    isPastPerformancePage || isPrivacyPolicyPage || isTermsOfServicePage || isCareersPage
                       ? 'text-secondary hover:text-accent'
                       : isScrolled
                       ? 'text-secondary hover:text-accent'
@@ -123,7 +126,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`xs:block sm:block md:block hidden p-2 rounded-lg transition-colors ${
-              isPastPerformancePage || isPrivacyPolicyPage
+              isPastPerformancePage || isPrivacyPolicyPage || isTermsOfServicePage || isCareersPage
                 ? 'text-secondary hover:bg-gray-100'
                 : isScrolled
                 ? 'text-gray-900 hover:bg-gray-100'

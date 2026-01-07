@@ -7,32 +7,26 @@ const Careers = () => {
     {
       title: 'Competitive Compensation',
       description: 'We offer competitive salaries and comprehensive benefits packages.',
-      icon: '💰',
     },
     {
       title: 'Professional Development',
       description: 'Continuous learning opportunities and career growth support.',
-      icon: '📚',
     },
     {
       title: 'Health & Wellness',
       description: 'Comprehensive health, dental, and vision insurance plans.',
-      icon: '🏥',
     },
     {
       title: 'Work-Life Balance',
       description: 'Flexible schedules and generous paid time off.',
-      icon: '⚖️',
     },
     {
       title: 'Team Environment',
       description: 'Collaborative workplace with supportive colleagues.',
-      icon: '🤝',
     },
     {
       title: 'Career Growth',
       description: 'Opportunities for advancement and skill development.',
-      icon: '📈',
     },
   ]
 
@@ -87,7 +81,7 @@ const Careers = () => {
             <h2 className="text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl xl1:text-5xl xl2:text-6xl font-bold text-secondary text-center mb-8 xs:mb-8 sm:mb-10 md:mb-12">
               Why Work With Us
             </h2>
-            <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xs:gap-6 sm:gap-8 md:gap-8 lg:gap-10">
+            <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-cols-3 gap-6 xs:gap-6 sm:gap-8 md:gap-8 lg:gap-10">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
@@ -96,9 +90,6 @@ const Careers = () => {
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="bg-white rounded-lg xs:rounded-lg sm:rounded-xl shadow-md p-6 xs:p-6 sm:p-8 md:p-8 lg:p-10 hover:shadow-xl transition-shadow"
                 >
-                  <div className="text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl mb-4 xs:mb-4 sm:mb-5">
-                    {benefit.icon}
-                  </div>
                   <h3 className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-secondary mb-3 xs:mb-3 sm:mb-4">
                     {benefit.title}
                   </h3>
@@ -129,7 +120,8 @@ const Careers = () => {
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                   className="bg-white rounded-lg xs:rounded-lg sm:rounded-xl shadow-md p-6 xs:p-6 sm:p-8 md:p-8 lg:p-10 hover:shadow-xl transition-shadow"
                 >
-                  <div className="flex flex-col xs:flex-col sm:flex-col md:flex-row md:items-center md:justify-between gap-4 xs:gap-4 sm:gap-4 md:gap-6">
+                  <div className="flex xs:flex-col sm:flex-col flex-row items-center justify-between gap-4 xs:gap-4 sm:gap-4 md:gap-6">
+
                     <div className="flex-1">
                       <h3 className="text-xl xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-secondary mb-2 xs:mb-2 sm:mb-3">
                         {position.title}
@@ -149,6 +141,7 @@ const Careers = () => {
                         </span>
                       </div>
                     </div>
+
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -176,12 +169,12 @@ const Careers = () => {
               We're always looking for talented individuals to join our team. Send us your resume and we'll keep you in mind for future opportunities.
             </p>
             <div className="text-center space-y-4 xs:space-y-4 sm:space-y-5">
-              <div className="bg-gray-50 p-6 xs:p-6 sm:p-8 rounded-lg xs:rounded-lg sm:rounded-xl">
+              <div className="bg-gray-50 p-6 xs:p-6 sm:p-8 rounded-lg xs:rounded-lg sm:rounded-xl text-center">
                 <p className="text-sm xs:text-sm sm:text-base md:text-base lg:text-base xl:text-lg font-semibold text-secondary mb-2">
                   Send your resume to:
                 </p>
-                <p className="text-base xs:text-base sm:text-lg md:text-lg lg:text-xl text-gray-700">
-                  careers@bcegovbuilders.com
+                <p className="text-base xs:text-base sm:text-md md:text-lg lg:text-xl ">
+                  careers@bcegov.com
                 </p>
               </div>
               <div className="pt-4 xs:pt-4 sm:pt-6">

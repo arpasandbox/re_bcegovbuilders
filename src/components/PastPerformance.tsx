@@ -145,13 +145,6 @@ const PastPerformance = () => {
     },    
   ]
 
-  // const stats = [
-  //   { number: '500+', label: 'Projects Completed' },
-  //   { number: '25+', label: 'Years Experience' },
-  //   { number: '98%', label: 'Client Satisfaction' },
-  //   { number: '50+', label: 'Awards Won' },
-  // ]
-
   return (
     <section
       id="projects"
@@ -173,31 +166,8 @@ const PastPerformance = () => {
           </p>
         </motion.div>
 
-        {/* Stats */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 grid-cols-4  gap-4 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl xl1:text-5xl xl2:text-6xl font-bold text-secondary mb-1 xs:mb-1 sm:mb-1 md:mb-2 lg:mb-2 xl:mb-3">
-                {stat.number}
-              </div>
-              <div className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base xl1:text-lg xl2:text-lg text-gray-600">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div> */}
-
         {/* Projects Grid */}
-        <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-3 gap-10 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
+        <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-cols-3 gap-10 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 mb-8 xs:mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
           
           {projects.slice(0, 6).map((project, index) => {
             const isActive = activeCard === index
@@ -253,21 +223,6 @@ const PastPerformance = () => {
                     </h3>
                   </div>
 
-                  {/* <div>
-                    <p className="text-white/90 text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm xl1:text-base xl2:text-base pt-2 xs:pt-2 sm:pt-2 md:pt-3 lg:pt-3 xl:pt-3">
-                      {project.project}
-                    </p>
-                    <p className="text-white/90 text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm xl1:text-base xl2:text-base pt-2 xs:pt-2 sm:pt-2 md:pt-3 lg:pt-3 xl:pt-3">
-                      {project.description}
-                    </p>
-                    <p className="text-white/90 text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm xl1:text-base xl2:text-base pt-2 xs:pt-2 sm:pt-2 md:pt-3 lg:pt-3 xl:pt-3">
-                      {project.location}
-                    </p>
-                    <p className="text-white/90 text-xs xs:text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm xl1:text-base xl2:text-base pt-2 xs:pt-2 sm:pt-2 md:pt-3 lg:pt-3 xl:pt-3">
-                      {project.price}
-                    </p>
-                  </div> */}
-                  
                   {/* Description - hidden by default, shown on hover (desktop) or click (mobile) */}
 
                   <div className={`transition-all duration-300 overflow-hidden ${showDetails ? 'max-h-32 xs:max-h-32 sm:max-h-36 md:max-h-40 lg:max-h-44 xl:max-h-48 xl2:max-h-48 opacity-100' 
