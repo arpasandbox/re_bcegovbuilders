@@ -50,7 +50,7 @@ const PastPerformance = () => {
       description: 'POST- CONSTRUCTION',
       location:'DATELAND, AZ',
       price:'$2M',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_3.png',
     },
     {
       name: 'CITY OF BELLEVUE NEW WAY OF WORK (NWOW)',
@@ -60,7 +60,7 @@ const PastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'BELLEVUE, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_4.png',
     },
     {
       name: 'SAULSBURY',
@@ -70,7 +70,7 @@ const PastPerformance = () => {
       description: 'SECURITY SERVICES',
       location:'DATELAND, AZ',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_5.png',
     },
     {
       name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER',
@@ -81,7 +81,7 @@ const PastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'SEATTLE, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_6.png',
     },
     {
       name: 'EVERGREEN MIDDLE SCHOOL',

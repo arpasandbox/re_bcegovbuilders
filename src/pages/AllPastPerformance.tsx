@@ -54,7 +54,7 @@ const AllPastPerformance = () => {
       description: 'POST- CONSTRUCTION',
       location:'DATELAND, AZ',
       price:'$2M',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_3.png',
     },
     {
       name: 'CITY OF BELLEVUE NEW WAY OF WORK (NWOW)',
@@ -64,7 +64,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'BELLEVUE, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_4.png',
     },
     {
       name: 'SAULSBURY',
@@ -74,7 +74,7 @@ const AllPastPerformance = () => {
       description: 'SECURITY SERVICES',
       location:'DATELAND, AZ',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_5.png',
     },
     {
       name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER',
@@ -85,7 +85,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'SEATTLE, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_6.png',
     },
     {
       name: 'EVERGREEN MIDDLE SCHOOL',
@@ -95,7 +95,7 @@ const AllPastPerformance = () => {
       description: 'POST - CONSTRUCTION',
       location:'REDMOND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_7.png',
     },
     {
       name: 'KIRKLAND MIDDLE SCHOOL',
@@ -105,7 +105,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'KIRKLAND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_8.png',
     },
     {
       name: 'FINN HILL MIDDLE SCHOOL',
@@ -115,7 +115,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'KIRKLAND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_9.png',
     },
     {
       name: 'REDMOND HIGH SCHOOL',
@@ -125,7 +125,7 @@ const AllPastPerformance = () => {
       description: 'POST- CONSTRUCTION',
       location:'REDMOND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_10.png',
     },
     {
       name: 'INGLEWOOD MIDDLE SCHOOL',
