@@ -135,7 +135,7 @@ const AllPastPerformance = () => {
       description: 'POST- CONSTRUCTION',
       location:'SAMMAMISH, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_11.png',
     },
     {
       name: 'ROSE HILL MIDDLE SCHOOL',
@@ -145,7 +145,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'REDMOND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_12.png',
     },
     {
       name: 'INTERNATIONAL COMMUNITY SCHOOL',
@@ -155,7 +155,7 @@ const AllPastPerformance = () => {
       description: 'POST- CONSTRUCTION',
       location:'KIRKLAND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_13.png',
     },
     {
       name: 'LAKE WASHINGTON HIGH SCHOOL',
@@ -165,7 +165,7 @@ const AllPastPerformance = () => {
       description: 'POST- CONSTRUCTION',
       location:'KIRKLAND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_14.png',
     },
     
     {
@@ -176,7 +176,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'SEATTLE, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_15.png',
     },
     {
       name: 'UNIVERSITY OF WASHINGTON-NORTHWEST HOSPITAL E-WING SLEEP ROOMS',
@@ -186,7 +186,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'SEATTLE, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_16.png',
     },
     {
       name: 'UNIVERSITY OF WASHINGTON MEDICAL CENTER PHYSICS AND LAB RENOVATION',
@@ -196,7 +196,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'SEATTLE, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_17.png',
     },
     {
       name: 'EASTLAKE HIGH SCHOOL',
@@ -206,7 +206,7 @@ const AllPastPerformance = () => {
       description: 'POST CONSTRUCTION',
       location:'SAMMAMISH, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_18.png',
     }, 
     {
       name: 'EMERSON MIDDLE SCHOOL',
@@ -216,7 +216,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'KIRKLAND, WA',
       price:'',
-      image: '/images/bce_pp_logo.png',
+      image: '/images/projects/project_19.png',
     },
     {
       name: 'KAMIAKIN MIDDLE SCHOOL',
@@ -225,6 +225,16 @@ const AllPastPerformance = () => {
       project: '73880-0037',
       description: 'COURSE OF CONSTRUCTION',
       location:'KIRKLAND, WA',
+      price:'',
+      image: '/images/projects/project_20.png',
+    },
+    {
+      name: '',
+      type: '',
+      status: '',
+      project: '',
+      description: '',
+      location:'',
       price:'',
       image: '/images/bce_pp_logo.png',
     },
