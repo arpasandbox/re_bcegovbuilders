@@ -9,27 +9,22 @@ const Hero = () => {
   const [isPaused, setIsPaused] = useState(false)
   const intervalRef = useRef<number | null>(null)
 
-  // Construction-related background images
+  // Construction-related background images from hero_slides folder
   const slides = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80',
+      image: '/images/hero_slides/hero_slide1.png',
       alt: 'Construction site with workers',
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/images/hero_slides/hero_slide2.png',
       alt: 'Modern construction building',
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Construction team at work',
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Construction equipment and workers',
+      image: '/images/hero_slides/hero_slide3.jpeg',
+      alt: 'McFarland Project',
     },
   ]
 
