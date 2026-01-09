@@ -45,7 +45,7 @@ const Footer = () => {
               <img src="/images/bce_logo_w.png" alt="bce_logo" />
             </div>
             <p className="xs:text-xs sm:text-sm md:text-sm text-base text-gray-400 mb-3 xs:mb-3 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-5">
-              Providing Professional Workforce Management to Ensure Your Projects Run Smoothly, on Time, and Within Budget
+              Providing Civil Construction & End-to-End Renewable Energy Systems
             </p>
             {/* <div className="flex space-x-3 xs:space-x-3 sm:space-x-3 md:space-x-4 lg:space-x-4 xl:space-x-5">
               {socialLinks.map((social, index) => (
