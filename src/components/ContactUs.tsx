@@ -41,16 +41,16 @@ const ContactUs = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="bg-gray-50 rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg overflow-hidden h-full flex flex-col">
-              <div className="p-4 xs:p-4 sm:p-5 md:p-6 lg:p-6 xl:p-8">
+              {/* <div className="p-4 xs:p-4 sm:p-5 md:p-6 lg:p-6 xl:p-8">
                 <h3 className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl xl1:text-3xl xl2:text-3xl font-bold text-secondary mb-2 xs:mb-2 sm:mb-3 md:mb-3 lg:mb-4">
-                  Office Location
+                  Where we are
                 </h3>
                 <p className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base text-gray-600">
                   18444 N. 25th Avenue Suite 420, Phoenix, AZ 85023, USA
                 </p>
-              </div>
+              </div> */}
               <div className="flex-1">
-                <div className="relative w-full h-64 xs:h-64 sm:h-72 md:h-80 lg:h-80 xl:h-96">
+                <div className="relative w-full h-full xs:h-64 sm:h-72 md:h-80 lg:h-full xl:h-full">
                   <iframe
                     title="BCE Construction Inc Location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.781378387865!2d-112.11559342409482!3d33.65434747330948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b6e0b6e9412cd%3A0x7f9e8a1f8d2e4a1a!2s18444%20N%2025th%20Ave%20%23420%2C%20Phoenix%2C%20AZ%2085023%2C%20USA!5e0!3m2!1sen!2sus!4v1736880000000!5m2!1sen!2sus"
