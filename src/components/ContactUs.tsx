@@ -1,31 +1,10 @@
   import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 
 const ContactUs = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  })
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault()
-  //   // Handle form submission here
-  //   console.log('Form submitted:', formData)
-  //   alert('Thank you for your message! We will get back to you soon.')
-  //   setFormData({ name: '', email: '', phone: '', message: '' })
-  // }
-
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value,
-  //   })
-  // }
 
   const contactInfo = [
     { icon: '/images/mail_icon.png', label: 'Email', value: 'sam@bcegov.com' },
@@ -55,86 +34,37 @@ const ContactUs = () => {
         </motion.div>
 
         <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
-          {/* Contact Form */}
-          {/* <motion.div
+          {/* Location Map */}
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-4 xs:space-y-4 sm:space-y-5 md:space-y-5 lg:space-y-6 xl:space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
-                  placeholder="Your Name"
-                />
+            <div className="bg-gray-50 rounded-lg xs:rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg overflow-hidden h-full flex flex-col">
+              <div className="p-4 xs:p-4 sm:p-5 md:p-6 lg:p-6 xl:p-8">
+                <h3 className="text-lg xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl xl1:text-3xl xl2:text-3xl font-bold text-secondary mb-2 xs:mb-2 sm:mb-3 md:mb-3 lg:mb-4">
+                  Office Location
+                </h3>
+                <p className="text-xs xs:text-xs sm:text-sm md:text-sm lg:text-base xl:text-base text-gray-600">
+                  18444 N. 25th Avenue Suite 420, Phoenix, AZ 85023, USA
+                </p>
               </div>
-
-              <div>
-                <label htmlFor="email" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
-                  placeholder="your.email@example.com"
-                />
+              <div className="flex-1">
+                <div className="relative w-full h-64 xs:h-64 sm:h-72 md:h-80 lg:h-80 xl:h-96">
+                  <iframe
+                    title="BCE Construction Inc Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.781378387865!2d-112.11559342409482!3d33.65434747330948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b6e0b6e9412cd%3A0x7f9e8a1f8d2e4a1a!2s18444%20N%2025th%20Ave%20%23420%2C%20Phoenix%2C%20AZ%2085023%2C%20USA!5e0!3m2!1sen!2sus!4v1736880000000!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
               </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-xs xs:text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium text-secondary mb-1 xs:mb-1 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-3 xs:px-3 sm:px-3 md:px-4 lg:px-4 xl:px-5 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 xl:py-4 text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent focus:outline-none resize-none"
-                  placeholder="Tell us about your project..."
-                />
-              </div>
-
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full px-4 xs:px-4 sm:px-5 md:px-6 lg:px-8 xl:px-10 py-3 xs:py-3 sm:py-3 md:py-3 lg:py-4 xl:py-5 bg-secondary text-white text-sm xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-lg font-semibold rounded-lg shadow-lg hover:bg-accent transition-colors"
-              >
-                Send Message
-              </motion.button>
-            </form>
-          </motion.div> */}
+            </div>
+          </motion.div>
 
           {/* Contact Information */}
           <motion.div

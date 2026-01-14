@@ -198,7 +198,8 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl1:text-7xl xl2:text-8xl font-bold text-white mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-6 xl:mb-8 drop-shadow-2xl"
           >
-            CIVIL CONSTRUCTION & RENEWABLE ENERGY
+            <p>CIVIL CONSTRUCTION &</p>
+            <p>RENEWABLE ENERGY</p>
           </motion.h1>
 
           <motion.p
