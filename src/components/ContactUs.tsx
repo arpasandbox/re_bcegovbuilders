@@ -56,7 +56,7 @@ const ContactUs = () => {
 
         <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 grid-cols-2 gap-6 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
           {/* Contact Form */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
@@ -134,7 +134,7 @@ const ContactUs = () => {
                 Send Message
               </motion.button>
             </form>
-          </motion.div>
+          </motion.div> */}
 
           {/* Contact Information */}
           <motion.div
