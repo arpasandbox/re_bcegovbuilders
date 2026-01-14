@@ -64,7 +64,7 @@ const AllPastPerformance = () => {
       description: 'COURSE OF CONSTRUCTION',
       location:'BELLEVUE, WA',
       price:'',
-      image: '/images/projects/project_4.png',
+      image: '/images/projects/project_21.png',
     },
     {
       name: 'SAULSBURY',
