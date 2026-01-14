@@ -12,20 +12,20 @@ const ContactUs = () => {
     message: '',
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', phone: '', message: '' })
-  }
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //   // Handle form submission here
+  //   console.log('Form submitted:', formData)
+  //   alert('Thank you for your message! We will get back to you soon.')
+  //   setFormData({ name: '', email: '', phone: '', message: '' })
+  // }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   })
+  // }
 
   const contactInfo = [
     { icon: '/images/mail_icon.png', label: 'Email', value: 'sam@bcegov.com' },
