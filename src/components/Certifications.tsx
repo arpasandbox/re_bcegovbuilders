@@ -16,13 +16,13 @@ const Certifications = () => {
       name: 'SDVOSB',
       image: '/images/sdvosb-logo.png',
     },
+    // {
+    //   name: '8(a)+Certified',
+    //   image: '/images/8(a)+Certified.png',
+    // },
     {
-      name: '8(a)+Certified',
-      image: '/images/8(a)+Certified.png',
-    },
-    {
-      // name: '8(a)+Certified',
-      // image: '/images/sba-logo.png',
+      name: 'sba',
+      image: '/images/sba-logo.png',
     },
     {
       name: 'ROC',
